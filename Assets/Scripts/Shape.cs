@@ -20,11 +20,13 @@ public abstract class Shape : MonoBehaviour
     
     private string name1;
     public Color color;
+
+    // ENCAPSULATION
     protected string Name { get => name1; set => name1 = value; }
     public Color Color { get => color; set => color = value; }
 
-    
 
+    // ABSTRACTION
     protected virtual void DisplayText()
     {
         UIManager.Instance.tMP_Text.text = $"Hi, I'm {Name} of {Color} color!";
